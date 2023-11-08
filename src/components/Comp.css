@@ -1,0 +1,125 @@
+.border-cstm1 {
+    border-radius: 7.826px;
+    border: 0.5px solid #F9C306;
+    background: rgba(26, 25, 25, 0.50);
+    backdrop-filter: blur(6.5217390060424805px);
+    letter-spacing: 2px;
+
+}
+
+.mybg {
+    border: 1px solid #000;
+    background: url(../assets/cover.png), black 50% / cover no-repeat;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bordermy{
+        border-width: 1px;
+        border-style: solid;
+        border-color: initial;
+        border-image: linear-gradient(90deg, rgba(249, 195, 6, 0), rgba(249, 195, 6, 0.3), rgba(249, 195, 6, 0)) 1 / 1 / 0 stretch;
+        padding: 8px;
+
+}
+/* Define the gradient border utility class */
+.bordermy-2 {
+    border-radius: 7.826px;
+    border: 0.5px solid #F9C306;
+    backdrop-filter: blur(6.5217390060424805px);
+    letter-spacing: 2px;
+}
+
+
+.mytxt{
+    background-image: linear-gradient(180deg, #F9C306, #BE1E21);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent ;
+
+}
+
+.secone-bg{
+    /* border: 1px solid #000; */
+background: url(../assets/Katana\ Inu\ BG1\ 1.png), black 50%;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+/* Define the gradient border utility class */
+.border-y-my {
+    position: relative;
+}
+
+/* Create the gradient border on the left using ::before pseudo-element */
+.border-y-my::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px; /* Adjust the width of the border as needed */
+    height: 100%;
+    background-image: linear-gradient(90deg, rgba(249, 195, 6, 0), rgba(249, 195, 6, 0.3), rgba(249, 195, 6, 0));
+    background-size: 100% 100%;
+}
+
+.regbtn{
+    border-radius: 9px;
+border: 1.42px solid #605272;
+background: linear-gradient(274deg, #C45500 17.04%, #FFC700 81.53%);
+}
+.sec-3-bg{
+background: url(../assets/ssec.png), black 30%;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+
+.charbg{
+  
+background: url(../assets/Rectangle\ 3967-1.png);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;  
+}
+
+
+.sec5bg{
+    background: url(../assets/telegram-cloud-document-4-5900135907549253111\ 1\ 1.png), black 30%;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+.myf{
+    flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 1380px) {
+ 
+   
+    .myf{
+        flex-wrap: wrap;
+    }
+    
+    }
+
+
+
+    @media screen and (max-width: 1023px) {
+ 
+   
+        .myf{
+            flex-wrap: nowrap;
+        }
+        
+        }
+    
