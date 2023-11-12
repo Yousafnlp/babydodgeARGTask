@@ -19,5 +19,21 @@
     object-fit: cover;
     
   }
+
+
+
+  @keyframes upAndDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  .animated-image {
+    
+    animation: upAndDown 2s infinite; /* Adjust animation duration as needed */
+  }
   
   

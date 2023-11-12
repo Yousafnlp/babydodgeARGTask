@@ -4,9 +4,12 @@ import './Comp.css'
 function Footer() {
   return (
     <div>
-        <div className="bordermy p-4  bg-black">
+        <div className=" pt-[80px] pb-[40px]  bg-black flex justify-center items-center">
 
-<div className="grid grid-cols-1 gap-5 md:grid-cols-1 lg:grid-cols-2 container p-8 flex justify-center items-center ">
+        <div className="container m-auto">  
+     
+
+<div className="grid grid-cols-1 gap-8 px-3  md:grid-cols-1 lg:grid-cols-2  flex-wrap  flex justify-center items-end ">
 
     <div>
         <img src={require('../assets/footer.png')} alt="" />
@@ -26,21 +29,21 @@ function Footer() {
     </div>
 
     <div>
-<div className="grid grid-cols-1 gap-4 md:grid-cols-1 lg:grid-cols-3 container mx-auto lg:py-[68px] md:py-8 py-2  flex justify-center items-center ">
+<div className=" gap-3    mywrp     flex justify-my  items-end ">
 
 
-
+<div className='flex gap-3 items-end'>
 
         <div>
-        <p className='text-[#ffffff] font-blome capitalize mt-[25px]'>PRODUCTS</p>
+        <p className='text-[#ffffff] font-blome capitalize '>PRODUCTS</p>
         <ul className='mt-4'>
-            <li className='text-[#b4b4b5] w-[140px] cursor-pointer mb-[16px]'>Pancakeswp</li>
-            <li  className='text-[#b4b4b5] w-[140px] cursor-pointer mb-[16px]'>Uniswap</li>
-            <li  className='text-[#b4b4b5] w-[140px] cursor-pointer mb-[16px]'>Whitepapper</li>
-            <li  className='text-[#b4b4b5] w-[140px] cursor-pointer mb-[16px]'>Roadmap</li>
-            <li  className='text-[#b4b4b5] w-[140px] cursor-pointer mb-[16px]'>Tokenomics</li>
-            <li  className='text-[#b4b4b5] w-[140px] cursor-pointer mb-[16px]'>FAQ</li>
-            <li  className='text-[#b4b4b5] w-[140px] cursor-pointer mb-[16px]'>Chainplay</li>
+            <li className='text-[#b4b4b5] pb-[8px] pt-[10px] border-b border-[#F9C306] w-[140px] cursor-pointer mb-[16px]'>Pancakeswp</li>
+            <li  className='text-[#b4b4b5] pb-[8px] pt-[10px] border-b border-[#F9C306] w-[140px] cursor-pointer mb-[16px]'>Uniswap</li>
+            <li  className='text-[#b4b4b5] pb-[8px] pt-[10px] border-b border-[#F9C306] w-[140px] cursor-pointer mb-[16px]'>Whitepapper</li>
+            <li  className='text-[#b4b4b5] pb-[8px] pt-[10px] border-b border-[#F9C306] w-[140px] cursor-pointer mb-[16px]'>Roadmap</li>
+            <li  className='text-[#b4b4b5] pb-[8px] pt-[10px] border-b border-[#F9C306] w-[140px] cursor-pointer mb-[16px]'>Tokenomics</li>
+            <li  className='text-[#b4b4b5] pb-[8px] pt-[10px] border-b border-[#F9C306] w-[140px] cursor-pointer mb-[16px]'>FAQ</li>
+            <li  className='text-[#b4b4b5] pb-[8px] pt-[10px] border-b border-[#F9C306] w-[140px] cursor-pointer mb-[16px]'>Chainplay</li>
         </ul>
         </div>
         
@@ -53,44 +56,46 @@ function Footer() {
 
     <p  className='text-[#ffffff] font-blome capitalize'>NEED HELP</p>
         <ul  className='mt-4'>
-            <li  className='text-[#b4b4b5] w-[140px] cursor-pointer mb-[16px]'>Contact Us</li>
-            <li  className='text-[#b4b4b5] w-[140px] cursor-pointer mb-[16px]'>Discord</li>
-            <li  className='text-[#b4b4b5] w-[140px] cursor-pointer mb-[16px]'>Medium</li>
-            <li  className='text-[#b4b4b5] w-[140px] cursor-pointer mb-[16px]'>Reddii</li>
-            <li  className='text-[#b4b4b5] w-[140px] cursor-pointer mb-[16px]'>ChainVision Games</li>
+            <li  className='text-[#b4b4b5] pb-[8px] pt-[10px] border-b border-[#F9C306] w-[140px] cursor-pointer mb-[16px]'>Contact Us</li>
+            <li  className='text-[#b4b4b5] pb-[8px] pt-[10px] border-b border-[#F9C306] w-[140px] cursor-pointer mb-[16px]'>Discord</li>
+            <li  className='text-[#b4b4b5] pb-[8px] pt-[10px] border-b border-[#F9C306] w-[140px] cursor-pointer mb-[16px]'>Medium</li>
+            <li  className='text-[#b4b4b5] pb-[8px] pt-[10px] border-b border-[#F9C306] w-[140px] cursor-pointer mb-[16px]'>Reddii</li>
+            <li  className='text-[#b4b4b5] pb-[8px] pt-[10px] border-b border-[#F9C306] w-[140px] cursor-pointer mb-[16px]'>ChainVision Games</li>
         </ul>  
 
         </div>
   
-
-    <div className='flex justify-center flex-col align-center mt-[55px]'>
+        </div>
+    <div className='flex justify-center flex-col align-start '>
         <div>
         <img src={require('../assets/l1.png')} alt="" />
 
 
         </div>
     <p className='text-[#ffffff] font-blome capitalize'>FOLLLOW US</p>
-        <ul className='mt-3 '>
+        <ul >
 
-            <li><div className='d-flex myf  mb-2 gap-2'>
+            <li><div className='flex myf my-4 gap-2'>
             <img src={require('../assets/i4.png')} alt="" />
             <img src={require('../assets/i3.png')} alt="" />
             <img src={require('../assets/i2.png')} alt="" />
             <img src={require('../assets/i1.png')} alt="" />
                 </div></li>
-            <li  className='text-[#b4b4b5] w-[140px] cursor-pointer mb-[16px]'>Terms of Service</li>
-            <li  className='text-[#b4b4b5] w-[140px] cursor-pointer mb-[16px]'>Cookies Polices</li>
+            <li  className='text-[#b4b4b5] w-[140px] pb-[8px] pt-[10px] border-b border-[#F9C306] cursor-pointer mb-[16px]'>Terms of Service</li>
+            <li  className='text-[#b4b4b5] w-[140px] pb-[8px] pt-[10px] border-b border-[#F9C306] cursor-pointer mb-[16px]'>Cookies Polices</li>
         </ul>
     </div>
 
     </div>
 
     </div>
+    </div>
+    </div>
    
 
 </div>
 </div>
-    </div>
+   
   )
 }
 

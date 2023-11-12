@@ -13,18 +13,14 @@ import SwiperMiddle from './components/SwiperMiddle'
 function App() {
   return (
     <div>
-         {/* <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1> */}
     <Header/>
     <BelowHeader/>
     <SectionOne/>
     
-    {/* <SwiperSlides/> */}
+  
  
  <SwiperMiddle/>
     <SectionThree/>
-    {/* <SectionFour/> */}
     <Footer/>
 
     </div>

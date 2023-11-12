@@ -4,12 +4,12 @@ import HeaderMob from './HeaderMob';
 
 function Header() {
   const [isMobileOrTablet, setIsMobileOrTablet] = useState(
-    window.innerWidth <= 768 // Adjust the breakpoint as needed
+    window.innerWidth <= 1030 // Adjust the breakpoint as needed
   );
 
   useEffect(() => {
     const handleWindowSizeChange = () => {
-      setIsMobileOrTablet(window.innerWidth <= 10240); // Adjust the breakpoint as needed
+      setIsMobileOrTablet(window.innerWidth <= 1030); // Adjust the breakpoint as needed
     };
 
     window.addEventListener('resize', handleWindowSizeChange);

@@ -17,6 +17,10 @@ function SwiperSlideMob() {
    
     <>
     
+<div className="bg-black">
+
+
+<div className="container m-auto p-0">
     <Swiper
       centeredSlides={true}
       autoplay={{
@@ -24,25 +28,28 @@ function SwiperSlideMob() {
         disableOnInteraction: false,
       }}
       modules={[Autoplay]}
-      className="mySwiper swiper-cover bg-black  bordermy  py-5"
+      className="mySwiper swiper-cover bg-black  "
     >
+   
+
+      
 
 
       <SwiperSlide className='slides'>
           
-          <div className="slideChild">
+          <div className="slideChild  m-auto p-0">
 
 
-          <div className='container flex justify-center items-center  flex-col'>
+          <div className=' flex justify-center  pt-8 pb-5  px-3 items-center  flex-col'>
 
 
 
    
-     <div className='charbg w-[70%]' >
+     <div className='charbg animated-image w-[90%]' >
 
-          <img  className="m-3 w-[90%]" src={require('../assets/sww.png')} alt="" />
+          <img  className="m-3 w-[95%]" src={require('../assets/sww.png')} alt="" />
       </div>
-      <div className=' bordermy-2 p-3 w-100'>
+      <div className=' bordermy-2 p-3 w-full'>
         <h2 className='text-white mb-4 text-sm md:text-base lg:text-base text-sm md:text-base lg:text-base	'>BNB CHAIN</h2>
 
         <p className='text-slate-500 	text-sm md:text-base lg:text-base text-sm md:text-base lg:text-base	'>PARITY</p>
@@ -64,20 +71,20 @@ function SwiperSlideMob() {
 
           <SwiperSlide className='slides'>
           
-          <div className="slideChild">
+          <div className="slideChild  m-auto p-0">
 
 
-          <div className='container flex justify-center items-center  flex-col'>
-
-   
+          <div className=' flex justify-center items-center   pt-8 pb-5  px-3 flex-col'>
 
    
-      <div className='charbg  w-[70%]' >
+
+   
+      <div className='charbg animated-image  w-[70%]' >
 
           
           <img className="m-3 w-[90%]" src={require('../assets/Group 40731.png')} alt="" />
       </div>
-      <div className=' bordermy-2 p-3 w-100'>
+      <div className=' bordermy-2 p-3 w-full'>
         <h2 className='text-white mb-4 text-sm md:text-base lg:text-base text-sm md:text-base lg:text-base	'>BNB CHAIN</h2>
 
         <p className='text-slate-500 	text-sm md:text-base lg:text-base text-sm md:text-base lg:text-base	'>PARITY</p>
@@ -100,17 +107,17 @@ function SwiperSlideMob() {
           
       <SwiperSlide className='slides'>
           
-          <div className="slideChild">
+          <div className="slideChild  m-auto p-0">
 
 
-          <div className=' container flex justify-center items-center  flex-col'>
+          <div className='  flex justify-center items-center  pt-8 pb-5  px-3 flex-col'>
 
 
 
-      <div className='charbg  w-[70%]' >
-          <img className="m-3 w-[90%]" src={require('../assets/katana-08 1 - character 1.png')} alt="" />
+      <div className='charbg animated-image  w-[90%]' >
+          <img className="m-3 w-[100%]" src={require('../assets/katana-08 1 - character 1.png')} alt="" />
       </div>
-      <div className=' bordermy-2 p-3 w-100'>
+      <div className=' bordermy-2 p-3 w-full'>
         <h2 className='text-white mb-4 text-sm md:text-base lg:text-base text-sm md:text-base lg:text-base	'>BNB CHAIN</h2>
 
         <p className='text-slate-500 	text-sm md:text-base lg:text-base text-sm md:text-base lg:text-base	'>PARITY</p>
@@ -138,10 +145,10 @@ function SwiperSlideMob() {
 
           
       
-     
+          
     </Swiper>
 
- 
+    </div></div>
       </>
 
   )
