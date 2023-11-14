@@ -7,20 +7,25 @@ import SectionThree from './components/SectionThree'
 import SwiperSlides from './components/SwiperSlides'
 import Footer from './components/Footer'
 import SwiperMiddle from './components/SwiperMiddle'
+import Video from './components/Video'
+import Navbar from './components/Navbar'
+import Navmob from './components/Navmob'
 
 
 
 function App() {
   return (
     <div>
+      
     <Header/>
     <BelowHeader/>
     <SectionOne/>
     
   
- 
+    
  <SwiperMiddle/>
-    <SectionThree/>
+<SectionThree/>
+    <Video/>
     <Footer/>
 
     </div>

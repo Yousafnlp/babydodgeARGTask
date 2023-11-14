@@ -1,256 +1,305 @@
-import React from 'react'
+import React, { useState, useRef } from 'react';
+import SwiperCore  from 'swiper';
+
+import { Autoplay ,  Navigation} from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-import './Comp.css'
-
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import 'swiper/css/effect-coverflow'; // Import additional styles if needed
 
-import './Swiper.css';
-
-import { Autoplay } from 'swiper/modules';
+// SwiperCore.use([Navigation, Autoplay]);
 
 function SwiperSlides() {
+  const [activeIndex, setActiveIndex] = useState(1);
+
+  // Create a ref to access the Swiper instance
+  // const swiperRef = useRef(null);
+
+  const handleSlideChange = (swiper) => {
+    setActiveIndex(swiper.activeIndex);
+    if (swiper.activeIndex === 7) {
+      swiper.slideTo(1)
+      console.log('hbk');
+    }
+  };
+
   return (
+    <>
+      <div className="bg-black pt-[70px]">
+        <div className="container pb-[70px] m-auto ">
+          <Swiper
+          navigation={true}
+          
+            centeredSlides={true}
+            autoplay={{
+              delay: 2700,
+              disableOnInteraction: false,
+            }}
+            slidesPerView={3}
+            initialSlide={1}
+            spaceBetween={0}
+            speed={500}
+            modules={[Autoplay]}
+            className="mySwiper swiper-cover m-auto bg-black"
+            onSlideChange={handleSlideChange}
+            style={{ paddingBottom: '20px !important' }}
+            // ref={swiperRef}
+          >
+         
+         
+         
+         
+            {/* Swiper slides */}
+            <SwiperSlide className='slideslg'>
+              <div className="slideChildlg m-auto p-0">
+                <div className='flex justify-center items-center flex-col'>
+                  <div className='charbg animated-image'>
+                    <img className={`m-3 ${activeIndex === 0 ? 'w-full' : 'w-[70%]'}`} src={require('../assets/sww.png')} alt="" />
+                  </div>
+                  <div className='bordermy-2 p-3 w-[200px] text-center'>
+                   
+       <h2 className='text-white mb-4 text-sm md:text-sm lg:text-sm text-sm md:text-sm lg:text-sm	'>BNB CHAIN</h2>
+
+       <p className='text-slate-500 	text-sm md:text-sm lg:text-sm text-sm md:text-sm lg:text-sm	'>PARITY</p>
+       <h4 className='text-white mb-4 text-sm md:text-base lg:text-base'>IMMORAL</h4>
+
+       <p className='text-slate-500 text-sm md:text-sm lg:text-sm	'>QUANITY</p>
+       <h4 className='text-white text-sm md:text-base lg:text-base'>TBA</h4>
+
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide className='slideslg'>
+              <div className="slideChildlg">
+                <div className='flex-col flex px-1 w-full gap-5 justify-center items-center'>
+                  <div className='charbg animated-image'>
+                    <img className={`m-3 ${activeIndex === 1 ? 'w-full' : 'w-[67%]'}`} src={require('../assets/katana-08 1 - character 1.png')} alt="" />
+                  </div>
+                  <div className='bordermy-2 p-3 w-[200px] text-center'>
  
-      <>
-<div className="bg-black">
+       <h2 className='text-white mb-4 text-sm md:text-sm lg:text-sm text-sm md:text-sm lg:text-sm	'>BNB CHAIN</h2>
 
+       <p className='text-slate-500 	text-sm md:text-sm lg:text-sm text-sm md:text-sm lg:text-sm	'>PARITY</p>
+       <h4 className='text-white mb-4 text-sm md:text-base lg:text-base'>IMMORAL</h4>
 
-<div className="container m-auto p-0">
-
-
-      <Swiper
-        centeredSlides={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        modules={[Autoplay]}
-        className="mySwiper swiper-cover p-0  m-auto bg-black "
-      >
-
-      
-
-        <SwiperSlide className='slides'>
-            
-            <div className="slideChild  m-auto p-0">
-
-
-            <div className=' flex pt-8 pb-5 px-1 w-full  gap-5 justify-center items-center '>
-
-
-<div className='w-[20%]'>
-        <div className='charbg animated-image' >
-            <img className="m-3 w-[90%]" src={require('../assets/katana-08 1 - character 1.png')} alt="" />
-        </div>
-        <div className=' bordermy-2 p-3 w-full'>
-          <h2 className='text-white mb-4 text-sm md:text-base lg:text-base text-sm md:text-base lg:text-base	'>BNB CHAIN</h2>
-
-          <p className='text-slate-500 	text-sm md:text-base lg:text-base text-sm md:text-base lg:text-base	'>PARITY</p>
-          <h4 className='text-white mb-4 text-base md:text-xl lg:text-xl'>IMMORAL</h4>
-
-          <p className='text-slate-500 text-sm md:text-base lg:text-base	'>QUANITY</p>
-          <h4 className='text-white text-base md:text-xl lg:text-xl'>TBA</h4>
-        </div>
-
-        
-        </div>
-
-        <div className='w-[50%]'>
-        <div className='charbg animated-image' >
-
-            
-            <img className="m-3 w-[60%]" src={require('../assets/Group 40731.png')} alt="" />
-        </div>
-        <div className=' bordermy-2 p-3 w-full'>
-          <h2 className='text-white mb-4 text-sm md:text-base lg:text-base text-sm md:text-base lg:text-base	'>BNB CHAIN</h2>
-
-          <p className='text-slate-500 	text-sm md:text-base lg:text-base text-sm md:text-base lg:text-base	'>PARITY</p>
-          <h4 className='text-white mb-4 text-base md:text-xl lg:text-xl'>IMMORAL</h4>
-
-          <p className='text-slate-500 text-sm md:text-base lg:text-base	'>QUANITY</p>
-          <h4 className='text-white text-base md:text-xl lg:text-xl'>TBA</h4>
-        </div>
-        </div>
-
-        <div className='w-[20%]'>
-        <div className='charbg animated-image' >
-
-            <img  className="m-3 w-[90%]" src={require('../assets/sww.png')} alt="" />
-        </div>
-        <div className=' bordermy-2 p-3 w-full'>
-          <h2 className='text-white mb-4 text-sm md:text-base lg:text-base text-sm md:text-base lg:text-base	'>BNB CHAIN</h2>
-
-          <p className='text-slate-500 	text-sm md:text-base lg:text-base text-sm md:text-base lg:text-base	'>PARITY</p>
-          <h4 className='text-white mb-4 text-base md:text-xl lg:text-xl'>IMMORAL</h4>
-
-          <p className='text-slate-500 text-sm md:text-base lg:text-base	'>QUANITY</p>
-          <h4 className='text-white text-base md:text-xl lg:text-xl'>TBA</h4>
-        </div>
-        </div>
-
-
-      </div>
-
-            </div>
-            
+       <p className='text-slate-500 text-sm md:text-sm lg:text-sm	'>QUANITY</p>
+       <h4 className='text-white text-sm md:text-base lg:text-base'>TBA</h4>
+     </div>           
+          </div>
+              </div>
             </SwiperSlide>
 
-
-
-            <SwiperSlide className='slides'>
-            
-            <div className="slideChild  m-auto p-0">
-
-
-            <div className=' flex   pt-8 pb-5 px-1 w-full gap-5 justify-center items-center '>
-
-
-
-            <div className='w-[20%]'>
-        <div className='charbg animated-image' >
-
-            
-            <img className="m-3 w-[90%]" src={require('../assets/Group 40731.png')} alt="" />
-        </div>
-        <div className=' bordermy-2 p-3 w-full'>
-          <h2 className='text-white mb-4 text-sm md:text-base lg:text-base text-sm md:text-base lg:text-base	'>BNB CHAIN</h2>
-
-          <p className='text-slate-500 	text-sm md:text-base lg:text-base text-sm md:text-base lg:text-base	'>PARITY</p>
-          <h4 className='text-white mb-4 text-base md:text-xl lg:text-xl'>IMMORAL</h4>
-
-          <p className='text-slate-500 text-sm md:text-base lg:text-base	'>QUANITY</p>
-          <h4 className='text-white text-base md:text-xl lg:text-xl'>TBA</h4>
-        </div>
-        </div>
-
-<div className='w-[50%]'>
-        <div className='charbg animated-image' >
-            <img className="m-3 w-[90%]" src={require('../assets/katana-08 1 - character 1.png')} alt="" />
-        </div>
-        <div className=' bordermy-2 p-3 w-full'>
-          <h2 className='text-white mb-4 text-sm md:text-base lg:text-base text-sm md:text-base lg:text-base	'>BNB CHAIN</h2>
-
-          <p className='text-slate-500 	text-sm md:text-base lg:text-base text-sm md:text-base lg:text-base	'>PARITY</p>
-          <h4 className='text-white mb-4 text-base md:text-xl lg:text-xl'>IMMORAL</h4>
-
-          <p className='text-slate-500 text-sm md:text-base lg:text-base	'>QUANITY</p>
-          <h4 className='text-white text-base md:text-xl lg:text-xl'>TBA</h4>
-        </div>
-
-        
-        </div>
-
-
-        <div className='w-[20%]'>
-        <div className='charbg animated-image' >
-
-            <img  className="m-3 w-[90%]" src={require('../assets/sww.png')} alt="" />
-        </div>
-        <div className=' bordermy-2 p-3 w-full'>
-          <h2 className='text-white mb-4 text-sm md:text-base lg:text-base text-sm md:text-base lg:text-base	'>BNB CHAIN</h2>
-
-          <p className='text-slate-500 	text-sm md:text-base lg:text-base text-sm md:text-base lg:text-base	'>PARITY</p>
-          <h4 className='text-white mb-4 text-base md:text-xl lg:text-xl'>IMMORAL</h4>
-
-          <p className='text-slate-500 text-sm md:text-base lg:text-base	'>QUANITY</p>
-          <h4 className='text-white text-base md:text-xl lg:text-xl'>TBA</h4>
-        </div>
-        </div>
-
-
-      </div>
-
-            </div>
-            
-            </SwiperSlide>
-
-
-            <SwiperSlide className='slides'>
-            
-            <div className="slideChild  m-auto p-0">
-
-
-            <div className=' flex  pt-8 pb-5 px-1  w-full gap-5 justify-center items-center '>
-
-
-<div className='w-[20%]'>
-        <div className='charbg animated-image' >
-            <img className="m-3 w-[90%]" src={require('../assets/katana-08 1 - character 1.png')} alt="" />
-        </div>
-        <div className=' bordermy-2 p-3 w-full'>
-          <h2 className='text-white mb-4 text-sm md:text-base lg:text-base text-sm md:text-base lg:text-base	'>BNB CHAIN</h2>
-
-          <p className='text-slate-500 	text-sm md:text-base lg:text-base text-sm md:text-base lg:text-base	'>PARITY</p>
-          <h4 className='text-white mb-4 text-base md:text-xl lg:text-xl'>IMMORAL</h4>
-
-          <p className='text-slate-500 text-sm md:text-base lg:text-base	'>QUANITY</p>
-          <h4 className='text-white text-base md:text-xl lg:text-xl'>TBA</h4>
-        </div>
-
-        
-        </div>
-
+            <SwiperSlide className='slideslg'>
+              <div className="slideChildlg">
+                <div className='flex-col flex px-1 w-full gap-5 justify-center items-center'>
+                  <div className='charbg animated-image'>
+                    <img className={`m-3 ${activeIndex === 2 ? 'w-[70%]' : 'w-[45%]'}`} src={require('../assets/Group 40731.png')} alt="" />
+                  </div>
+                  <div className='bordermy-2 p-3 w-[200px] text-center'>
  
+       <h2 className='text-white mb-4 text-sm md:text-sm lg:text-sm text-sm md:text-sm lg:text-sm	'>BNB CHAIN</h2>
 
-        <div className='w-[50%]'>
-        <div className='charbg animated-image' >
+       <p className='text-slate-500 	text-sm md:text-sm lg:text-sm text-sm md:text-sm lg:text-sm	'>PARITY</p>
+       <h4 className='text-white mb-4 text-sm md:text-base lg:text-base'>IMMORAL</h4>
 
-            <img  className="m-3 w-[90%]" src={require('../assets/sww.png')} alt="" />
-        </div>
-        <div className=' bordermy-2 p-3 w-full'>
-          <h2 className='text-white mb-4 text-sm md:text-base lg:text-base text-sm md:text-base lg:text-base	'>BNB CHAIN</h2>
+       <p className='text-slate-500 text-sm md:text-sm lg:text-sm	'>QUANITY</p>
+       <h4 className='text-white text-sm md:text-base lg:text-base'>TBA</h4>
+     </div>           
+          </div>
+              </div>
+            </SwiperSlide>
 
-          <p className='text-slate-500 	text-sm md:text-base lg:text-base text-sm md:text-base lg:text-base	'>PARITY</p>
-          <h4 className='text-white mb-4 text-base md:text-xl lg:text-xl'>IMMORAL</h4>
+            <SwiperSlide className='slideslg'>
+              <div className="slideChildlg m-auto p-0">
+                <div className='flex justify-center items-center flex-col'>
+                  <div className='charbg animated-image'>
+                    <img className={`m-3 ${activeIndex === 3 ? 'w-full' : 'w-[70%]'}`} src={require('../assets/sww.png')} alt="" />
+                  </div>
+                  <div className='bordermy-2 p-3 w-[200px] text-center'>
+                   
+       <h2 className='text-white mb-4 text-sm md:text-sm lg:text-sm text-sm md:text-sm lg:text-sm	'>BNB CHAIN</h2>
 
-          <p className='text-slate-500 text-sm md:text-base lg:text-base	'>QUANITY</p>
-          <h4 className='text-white text-base md:text-xl lg:text-xl'>TBA</h4>
-        </div>
-        </div>
+       <p className='text-slate-500 	text-sm md:text-sm lg:text-sm text-sm md:text-sm lg:text-sm	'>PARITY</p>
+       <h4 className='text-white mb-4 text-sm md:text-base lg:text-base'>IMMORAL</h4>
 
+       <p className='text-slate-500 text-sm md:text-sm lg:text-sm	'>QUANITY</p>
+       <h4 className='text-white text-sm md:text-base lg:text-base'>TBA</h4>
 
-
-        <div className='w-[20%]'>
-        <div className='charbg animated-image' >
-
-            
-            <img className="m-3 w-[90%]" src={require('../assets/Group 40731.png')} alt="" />
-        </div>
-        <div className=' bordermy-2 p-3 w-full'>
-          <h2 className='text-white mb-4 text-sm md:text-base lg:text-base text-sm md:text-base lg:text-base	'>BNB CHAIN</h2>
-
-          <p className='text-slate-500 	text-sm md:text-base lg:text-base text-sm md:text-base lg:text-base	'>PARITY</p>
-          <h4 className='text-white mb-4 text-base md:text-xl lg:text-xl'>IMMORAL</h4>
-
-          <p className='text-slate-500 text-sm md:text-base lg:text-base	'>QUANITY</p>
-          <h4 className='text-white text-base md:text-xl lg:text-xl'>TBA</h4>
-        </div>
-        </div>
-      </div>
-
-            </div>
-            
+                  </div>
+                </div>
+              </div>
             </SwiperSlide>
 
 
 
 
+            <SwiperSlide className='slideslg'>
+              <div className="slideChildlg">
+                <div className='flex-col flex px-1 w-full gap-5 justify-center items-center'>
+                  <div className='charbg animated-image'>
+                    <img className={`m-3 ${activeIndex === 4 ? 'w-full' : 'w-[67%]'}`} src={require('../assets/katana-08 1 - character 1.png')} alt="" />
+                  </div>
+                  <div className='bordermy-2 p-3 w-[200px] text-center'>
+ 
+       <h2 className='text-white mb-4 text-sm md:text-sm lg:text-sm text-sm md:text-sm lg:text-sm	'>BNB CHAIN</h2>
 
-            
-        
-       
-      </Swiper>
+       <p className='text-slate-500 	text-sm md:text-sm lg:text-sm text-sm md:text-sm lg:text-sm	'>PARITY</p>
+       <h4 className='text-white mb-4 text-sm md:text-base lg:text-base'>IMMORAL</h4>
 
-</div>
-</div>
-   
-        </>
+       <p className='text-slate-500 text-sm md:text-sm lg:text-sm	'>QUANITY</p>
+       <h4 className='text-white text-sm md:text-base lg:text-base'>TBA</h4>
+     </div>           
+          </div>
+              </div>
+            </SwiperSlide>
 
-  )
+
+            <SwiperSlide className='slideslg'>
+              <div className="slideChildlg">
+                <div className='flex-col flex px-1 w-full gap-5 justify-center items-center'>
+                  <div className='charbg animated-image'>
+                    <img className={`m-3 ${activeIndex === 5 ? 'w-[70%]' : 'w-[45%]'}`} src={require('../assets/Group 40731.png')} alt="" />
+                  </div>
+                  <div className='bordermy-2 p-3 w-[200px] text-center'>
+ 
+       <h2 className='text-white mb-4 text-sm md:text-sm lg:text-sm text-sm md:text-sm lg:text-sm	'>BNB CHAIN</h2>
+
+       <p className='text-slate-500 	text-sm md:text-sm lg:text-sm text-sm md:text-sm lg:text-sm	'>PARITY</p>
+       <h4 className='text-white mb-4 text-sm md:text-base lg:text-base'>IMMORAL</h4>
+
+       <p className='text-slate-500 text-sm md:text-sm lg:text-sm	'>QUANITY</p>
+       <h4 className='text-white text-sm md:text-base lg:text-base'>TBA</h4>
+     </div>           
+          </div>
+              </div>
+            </SwiperSlide>
+
+
+            <SwiperSlide className='slideslg'>
+              <div className="slideChildlg m-auto p-0">
+                <div className='flex justify-center items-center flex-col'>
+                  <div className='charbg animated-image'>
+                    <img className={`m-3 ${activeIndex === 6 ? 'w-full' : 'w-[70%]'}`} src={require('../assets/sww.png')} alt="" />
+                  </div>
+                  <div className='bordermy-2 p-3 w-[200px] text-center'>
+                   
+       <h2 className='text-white mb-4 text-sm md:text-sm lg:text-sm text-sm md:text-sm lg:text-sm	'>BNB CHAIN</h2>
+
+       <p className='text-slate-500 	text-sm md:text-sm lg:text-sm text-sm md:text-sm lg:text-sm	'>PARITY</p>
+       <h4 className='text-white mb-4 text-sm md:text-base lg:text-base'>IMMORAL</h4>
+
+       <p className='text-slate-500 text-sm md:text-sm lg:text-sm	'>QUANITY</p>
+       <h4 className='text-white text-sm md:text-base lg:text-base'>TBA</h4>
+
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+
+
+            <SwiperSlide className='slideslg'>
+              <div className="slideChildlg">
+                <div className='flex-col flex px-1 w-full gap-5 justify-center items-center'>
+                  <div className='charbg animated-image'>
+                    <img className={`m-3 ${activeIndex === 7 ? 'w-full' : 'w-[67%]'}`} src={require('../assets/katana-08 1 - character 1.png')} alt="" />
+                  </div>
+                  <div className='bordermy-2 p-3 w-[200px] text-center'>
+ 
+       <h2 className='text-white mb-4 text-sm md:text-sm lg:text-sm text-sm md:text-sm lg:text-sm	'>BNB CHAIN</h2>
+
+       <p className='text-slate-500 	text-sm md:text-sm lg:text-sm text-sm md:text-sm lg:text-sm	'>PARITY</p>
+       <h4 className='text-white mb-4 text-sm md:text-base lg:text-base'>IMMORAL</h4>
+
+       <p className='text-slate-500 text-sm md:text-sm lg:text-sm	'>QUANITY</p>
+       <h4 className='text-white text-sm md:text-base lg:text-base'>TBA</h4>
+     </div>           
+          </div>
+              </div>
+            </SwiperSlide>
+
+
+
+            <SwiperSlide className='slideslg'>
+              <div className="slideChildlg">
+                <div className='flex-col flex px-1 w-full gap-5 justify-center items-center'>
+                  <div className='charbg animated-image'>
+                    <img className={`m-3 ${activeIndex === 8 ? 'w-[70%]' : 'w-[45%]'}`} src={require('../assets/Group 40731.png')} alt="" />
+                  </div>
+                  <div className='bordermy-2 p-3 w-[200px] text-center'>
+ 
+       <h2 className='text-white mb-4 text-sm md:text-sm lg:text-sm text-sm md:text-sm lg:text-sm	'>BNB CHAIN</h2>
+
+       <p className='text-slate-500 	text-sm md:text-sm lg:text-sm text-sm md:text-sm lg:text-sm	'>PARITY</p>
+       <h4 className='text-white mb-4 text-sm md:text-base lg:text-base'>IMMORAL</h4>
+
+       <p className='text-slate-500 text-sm md:text-sm lg:text-sm	'>QUANITY</p>
+       <h4 className='text-white text-sm md:text-base lg:text-base'>TBA</h4>
+     </div>           
+          </div>
+              </div>
+            </SwiperSlide>
+
+
+            <SwiperSlide className='slideslg'>
+              <div className="slideChildlg m-auto p-0">
+                <div className='flex justify-center items-center flex-col'>
+                  <div className='charbg animated-image'>
+                    <img className={`m-3 ${activeIndex === 9 ? 'w-full' : 'w-[70%]'}`} src={require('../assets/sww.png')} alt="" />
+                  </div>
+                  <div className='bordermy-2 p-3 w-[200px] text-center'>
+                   
+       <h2 className='text-white mb-4 text-sm md:text-sm lg:text-sm text-sm md:text-sm lg:text-sm	'>BNB CHAIN</h2>
+
+       <p className='text-slate-500 	text-sm md:text-sm lg:text-sm text-sm md:text-sm lg:text-sm	'>PARITY</p>
+       <h4 className='text-white mb-4 text-sm md:text-base lg:text-base'>IMMORAL</h4>
+
+       <p className='text-slate-500 text-sm md:text-sm lg:text-sm	'>QUANITY</p>
+       <h4 className='text-white text-sm md:text-base lg:text-base'>TBA</h4>
+
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+
+
+            <SwiperSlide className='slideslg'>
+              <div className="slideChildlg">
+                <div className='flex-col flex px-1 w-full gap-5 justify-center items-center'>
+                  <div className='charbg animated-image'>
+                    <img className={`m-3 ${activeIndex === 10 ? 'w-full' : 'w-[67%]'}`} src={require('../assets/katana-08 1 - character 1.png')} alt="" />
+                  </div>
+                  <div className='bordermy-2 p-3 w-[200px] text-center'>
+ 
+       <h2 className='text-white mb-4 text-sm md:text-sm lg:text-sm text-sm md:text-sm lg:text-sm	'>BNB CHAIN</h2>
+
+       <p className='text-slate-500 	text-sm md:text-sm lg:text-sm text-sm md:text-sm lg:text-sm	'>PARITY</p>
+       <h4 className='text-white mb-4 text-sm md:text-base lg:text-base'>IMMORAL</h4>
+
+       <p className='text-slate-500 text-sm md:text-sm lg:text-sm	'>QUANITY</p>
+       <h4 className='text-white text-sm md:text-base lg:text-base'>TBA</h4>
+     </div>           
+          </div>
+              </div>
+            </SwiperSlide>
+
+          </Swiper>
+        </div>
+      </div>
+    </>
+  );
 }
 
-export default SwiperSlides
+export default SwiperSlides;
+
+
+
+
+
+
+
+
+
 

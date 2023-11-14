@@ -27,6 +27,9 @@ function SwiperSlideMob() {
         delay: 2500,
         disableOnInteraction: false,
       }}
+
+      // onLoopFix={2}
+      loop={true}
       modules={[Autoplay]}
       className="mySwiper swiper-cover bg-black  "
     >

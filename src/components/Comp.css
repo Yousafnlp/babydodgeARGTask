@@ -23,6 +23,15 @@
 
 }
 
+.border-cstm2 {
+    border-radius: 7.826px;
+    border: 0.5px solid #F9C306;
+    /* background: rgba(26, 25, 25, 0.50); */
+    /* backdrop-filter: blur(6.5217390060424805px); */
+    /* padding: 3px; */
+    letter-spacing: 2px;
+
+}
 .mybg {
     border: 1px solid #000;
     background: url(../assets/cover.png), black 50% / cover no-repeat;
@@ -33,7 +42,7 @@
 }
 
 .bordermy{
-        border-width: 3px;
+        border-width: 4px;
         border-style: solid;
         border-color: initial;
         border-image: linear-gradient(90deg, rgba(249, 195, 6, 0), rgba(249, 195, 6, 0.3), rgba(249, 195, 6, 0)) 1 / 1 / 0 stretch;

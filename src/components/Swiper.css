@@ -1,6 +1,7 @@
 
 .swiper-cover {
     width: 100%;
+    padding-bottom: 20px !important;
   }
   
   .slides {
@@ -21,6 +22,9 @@
   }
 
 
+  .swiper-button-prev:after, .swiper-button-next:after{
+    color: #f9c306 !important;
+  }
 
   @keyframes upAndDown {
     0%, 100% {
