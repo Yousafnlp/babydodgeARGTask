@@ -94,7 +94,7 @@ function HeaderMob() {
        
     <>
     <div className='bg-black flex justify-center items-center '>        
-            <div className="container m-auto p-0">
+            <div className="container-myc m-auto p-0">
         <div className='mybg '>
             <div className="grid bordermy grid-cols-1   flex justify-center items-center lg:flex-row-reverse	pt-4 pl-1 pr-1  ">
     

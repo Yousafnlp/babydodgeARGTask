@@ -9,7 +9,7 @@ function SectionThree() {
 <div className="bg-black ">
 
 
-            <div className="container m-auto p-0">
+            <div className="container-myc m-auto p-0">
 
             <div className="bordermy  pt-5 sec-3-bg">
 

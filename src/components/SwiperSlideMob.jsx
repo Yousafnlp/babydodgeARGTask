@@ -20,7 +20,7 @@ function SwiperSlideMob() {
 <div className="bg-black">
 
 
-<div className="container m-auto p-0">
+<div className="container-myc m-auto p-0">
     <Swiper
       centeredSlides={true}
       autoplay={{

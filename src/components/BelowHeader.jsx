@@ -6,7 +6,7 @@ function BelowHeader() {
   
   <>
   <div className='bg-black'>
-  <div className='container m-auto p-0'>
+  <div className='container-myc m-auto p-0'>
   <div className="   grid w-full grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-4  p-3  flex justify-center items-center text-center">
     <div className='text-white  px-2 	my-box-pd-1 text-lg  md:text-lg	  ' ><span className='mytxt'>CHAIN:</span> OKB CHAIN</div>
     <div className='text-white  px-2 	my-box-pd-2 text-lg  md:text-lg	  border-y-my' ><span className='mytxt'>Supply:</span> 20,000</div>
