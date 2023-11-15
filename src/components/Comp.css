@@ -275,3 +275,21 @@ background-size: cover;
             }
 
         }
+
+
+
+
+
+
+
+
+
+@media (min-width: 1920px){
+.container-myc {
+    max-width: 1920px !important;
+}
+}
+
+.container-myc {
+    width: 100%;
+}

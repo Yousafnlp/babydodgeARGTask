@@ -98,7 +98,7 @@ function SectionOne() {
 
     
   <div className='bg-black    '>
-<div className="container m-auto p-0">
+<div className="container-myc m-auto p-0">
 <div className="secone-bg">
   <div className="bordermy  w-full  flex justify-center items-center pt-3 phn-padd flex-wrap gap-2">
 
@@ -120,7 +120,7 @@ function SectionOne() {
                                         {/* <button  className="bg-blue-500 text-white p-2">Open Form</button> */}
 
                                         {isPopupOpen && (
-                                            <div className="container  items-center 	w-[90%] sm:w-[90%]  lg:w-[50%] md:w-[50%] absolute z-10  left-2/4 " style={{ transform: "translate(-50%, -50%)" }}>
+                                            <div className="container-myc  items-center 	w-[90%] sm:w-[90%]  lg:w-[50%] md:w-[50%] absolute z-10  left-2/4 " style={{ transform: "translate(-50%, -50%)" }}>
 
                                                 <div className="bg-black p-8   rounded-lg" >
                                                     <div className='text-rose-600 left-[95%] top-[4%]	absolute'

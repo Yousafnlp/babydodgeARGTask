@@ -66,7 +66,7 @@ function Footer() {
         <div>
             <div className=" pt-[80px] pb-[40px]  bg-black flex justify-center items-center">
 
-                <div className="container m-auto">
+                <div className="container-myc m-auto">
 
 
                     <div className="grid grid-cols-1 gap-8 px-3  md:grid-cols-1 lg:grid-cols-2  flex-wrap  flex justify-center items-end ">

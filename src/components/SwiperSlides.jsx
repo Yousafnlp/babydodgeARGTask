@@ -20,16 +20,17 @@ function SwiperSlides() {
     setActiveIndex(swiper.activeIndex);
     if (swiper.activeIndex === 7) {
       swiper.slideTo(1)
-      // console.log('hbk');
+      console.log('hbk');
     }
   };
 
   return (
     <>
       <div className="bg-black pt-[70px]">
-        <div className="container pb-[70px] m-auto ">
+        <div className="container-myc pb-[70px] m-auto ">
           <Swiper
-            
+          // navigation={true}
+          
             centeredSlides={true}
             autoplay={{
               delay: 2700,
