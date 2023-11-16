@@ -6,12 +6,12 @@ import Navbar from './Navbar';
 
 function Header() {
   const [isMobileOrTablet, setIsMobileOrTablet] = useState(
-    window.innerWidth <= 1031 // Adjust the breakpoint as needed
+    window.innerWidth <= 1230 // Adjust the breakpoint as needed
   );
 
   useEffect(() => {
     const handleWindowSizeChange = () => {
-      setIsMobileOrTablet(window.innerWidth <= 1031); // Adjust the breakpoint as needed
+      setIsMobileOrTablet(window.innerWidth <= 1230); // Adjust the breakpoint as needed
     };
 
     window.addEventListener('resize', handleWindowSizeChange);

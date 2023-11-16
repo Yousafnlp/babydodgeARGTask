@@ -3,6 +3,7 @@ import './Comp.css'
 
 import { BsArrowUpRight } from 'react-icons/bs';
 import { toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
 function Footer() {
 
 
@@ -118,14 +119,14 @@ function Footer() {
 
                                     <div>
                                         <p className='text-[#ffffff] font-blome capitalize '>PRODUCTS</p>
-                                        <ul className='mt-4'>
-                                            <li className='text-[#b4b4b5] pb-[8px] pt-[10px] border-b border-[#F9C306] w-[140px] cursor-pointer mb-[16px]'>Pancakeswp</li>
-                                            <li className='text-[#b4b4b5] pb-[8px] pt-[10px] border-b border-[#F9C306] w-[140px] cursor-pointer mb-[16px]'>Uniswap</li>
-                                            <li className='text-[#b4b4b5] pb-[8px] pt-[10px] border-b border-[#F9C306] w-[140px] cursor-pointer mb-[16px]'>Whitepapper</li>
-                                            <li className='text-[#b4b4b5] pb-[8px] pt-[10px] border-b border-[#F9C306] w-[140px] cursor-pointer mb-[16px]'>Roadmap</li>
-                                            <li className='text-[#b4b4b5] pb-[8px] pt-[10px] border-b border-[#F9C306] w-[140px] cursor-pointer mb-[16px]'>Tokenomics</li>
-                                            <li className='text-[#b4b4b5] pb-[8px] pt-[10px] border-b border-[#F9C306] w-[140px] cursor-pointer mb-[16px]'>FAQ</li>
-                                            <li className='text-[#b4b4b5] pb-[8px] pt-[10px] border-b border-[#F9C306] w-[140px] cursor-pointer mb-[16px]'>Chainplay</li>
+                                        <ul className='mt-4 flex flex-col'>
+                                            <Link to='https://pancakeswap.finance/swap?outputCurrency=0x6D6bA21E4C4b29CA7Bfa1c344Ba1E35B8DaE7205' target='_blank' className='text-[#b4b4b5] pb-[8px] pt-[10px] border-b border-[#F9C306] w-[140px] cursor-pointer mb-[16px]'>Pancakeswp</Link>
+                                            <Link to='https://app.uniswap.org/swap?inputCurrency=0x2e85ae1C47602f7927bCabc2Ff99C40aA222aE15' target='_blank' className='text-[#b4b4b5] pb-[8px] pt-[10px] border-b border-[#F9C306] w-[140px] cursor-pointer mb-[16px]'>Uniswap</Link>
+                                            <Link to='https://katanainu.com/assets/resources/katanainuwhitepaper.pdf' target='_blank' className='text-[#b4b4b5] pb-[8px] pt-[10px] border-b border-[#F9C306] w-[140px] cursor-pointer mb-[16px]'>Whitepapper</Link>
+                                            <Link to='' target='_blank' className='text-[#b4b4b5] pb-[8px] pt-[10px] border-b border-[#F9C306] w-[140px] cursor-pointer mb-[16px]'>Roadmap</Link>
+                                            <Link to='' target='_blank' className='text-[#b4b4b5] pb-[8px] pt-[10px] border-b border-[#F9C306] w-[140px] cursor-pointer mb-[16px]'>Tokenomics</Link>
+                                            <Link to='' target='_blank' className='text-[#b4b4b5] pb-[8px] pt-[10px] border-b border-[#F9C306] w-[140px] cursor-pointer mb-[16px]'>FAQ</Link>
+                                            <Link to='' target='_blank' className='text-[#b4b4b5] pb-[8px] pt-[10px] border-b border-[#F9C306] w-[140px] cursor-pointer mb-[16px]'>Chainplay</Link>
                                         </ul>
                                     </div>
 
@@ -157,12 +158,15 @@ function Footer() {
                                     <p className='text-[#ffffff] font-blome capitalize'>FOLLLOW US</p>
                                     <ul >
 
-                                        <li><div className='flex myf my-4 gap-2'>
+                                        <li><div className='flex myf my-4 gap-3'>
                                             <img src={require('../assets/i4.png')} alt="" />
                                             <img src={require('../assets/i3.png')} alt="" />
                                             <img src={require('../assets/i2.png')} alt="" />
                                             <img src={require('../assets/i1.png')} alt="" />
-                                        </div></li>
+                                            
+                                            <img src={require('../assets/i5.png')} alt="" />
+                                            <img src={require('../assets/i6.png')} alt="" />
+                                         </div></li>
                                         <li className='text-[#b4b4b5] w-[140px] pb-[8px] pt-[10px] border-b border-[#F9C306] cursor-pointer mb-[16px]'>Terms of Service</li>
                                         <li className='text-[#b4b4b5] w-[140px] pb-[8px] pt-[10px] border-b border-[#F9C306] cursor-pointer mb-[16px]'>Cookies Polices</li>
                                     </ul>
