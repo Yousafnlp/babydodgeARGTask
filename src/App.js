@@ -5,9 +5,10 @@ import BelowHeader from './components/BelowHeader'
 import SectionOne from './components/SectionOne'
 import SectionThree from './components/SectionThree'
 import Footer from './components/Footer'
-import SwiperMiddle from './components/SwiperMiddle'
+
 import Video from './components/Video'
 import './components/Comp.css'
+import SwiperSlides from './components/SwiperSlides'
 
 
 
@@ -18,10 +19,8 @@ function App() {
     <Header/>
     <BelowHeader/>
     <SectionOne/>
-    
-  
-    
- <SwiperMiddle/>
+
+ <SwiperSlides/>
 <SectionThree/>
     <Video/>
     <Footer/>

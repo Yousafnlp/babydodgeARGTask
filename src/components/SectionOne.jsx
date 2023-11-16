@@ -7,7 +7,9 @@ import { toast } from 'react-toastify';
 
 function SectionOne() {
 
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+    
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
 
     const openPopup = () => {
         setIsPopupOpen(true);
@@ -17,10 +19,6 @@ function SectionOne() {
         setIsPopupOpen(false);
     };
 
-    
-
-
-    
 
     
     const [formData, setFormData] = useState({
@@ -42,18 +40,19 @@ function SectionOne() {
 
             closePopup();
             e.preventDefault();
-            //   console.log("form data", formData);
+     
+            
+            let twitterValue
+            if(!twitter){
+                 twitterValue =  discord;
 
-            // if (!email || twitter || discord || walletAddress) {
-            //     toast.error("fill the complete form first")
-            //     return false;
-            // }
-
-
+            }else{
+                twitterValue= twitter
+            }
 
             let result = await fetch('https://launcherapi.katanainu.com/api/v1/whitelist/create', {
                 method: "post",
-                body: JSON.stringify( formData),
+                body: JSON.stringify({ email, twitterValue, walletAddress }),
                 headers: {  
                     
                     
@@ -64,12 +63,6 @@ function SectionOne() {
                 }
             })
 
-            console.log("final result__________", result)
-
-            if (result.ok) {
-                result = await result.json();
-                toast.success("Subscribed successfully")
-            }
 
             setFormData({
                 email: "",
@@ -80,7 +73,7 @@ function SectionOne() {
             })
 
 
-            console.log("final result__________", result)
+            // console.log("final result__________", result)
         }
 
         catch (error) {
@@ -92,12 +85,11 @@ function SectionOne() {
 
 
 
-
   return (
     
 
     
-  <div className='bg-black    '>
+  <div className='bg-black  relative  '>
 <div className="container-myc m-auto p-0">
 <div className="secone-bg">
   <div className="bordermy  w-full  flex justify-center items-center pt-3 phn-padd flex-wrap gap-2">
@@ -120,8 +112,9 @@ function SectionOne() {
                                         {/* <button  className="bg-blue-500 text-white p-2">Open Form</button> */}
 
                                         {isPopupOpen && (
-                                            <div className="container-myc  items-center 	w-[90%] sm:w-[90%]  lg:w-[50%] md:w-[50%] absolute z-10  left-2/4 " style={{ transform: "translate(-50%, -50%)" }}>
-
+                                            <div className="container-myc">
+                                            <div className="  items-center 	popup-width   absolute z-10 top-[70%] left-2/4 " style={{ transform: "translate(-50%, -50%)" }}>
+<form>
                                                 <div className="bg-black p-8   rounded-lg" >
                                                     <div className='text-rose-600 left-[95%] top-[4%]	absolute'
                                                     onClick={closePopup}
@@ -140,40 +133,44 @@ function SectionOne() {
 
                                                             <input
                                                                 type="text"
-                                                                className='bg-black px-8 w-full  py-1 rounded-lg text-white border-2  border-[#F9C306]'
+                                                                onChange={onChange}
+                                                                className='bg-black mb-4 px-8 w-full  py-1 rounded-lg text-white border-2  border-[#F9C306]'
                                                                 id="username"
                                                                 name="email"
                                                                 value={email}
                                                                 placeholder="Enter your Email"
-                                                                  />
+                                                            />
                                                         </div>      {/* Add other form fields as needed */}
 
-                                                        <div class="grid grid-cols-2 mt-5 gap-3 ">
+                                                 
 
 
-                                                            <div className="flex relative items-center">
+                                                        <label className='text-start  text-[hsla(0,0%,100%,.5)]'>Add Any one of your social Media</label>
+                                                            <div className="flex relative mt-3 items-center">
                                                                 <div className='text-white absolute  top-[10px] left-[10px]'>
                                                                     <FaTwitter />
                                                                 </div>
 
                                                                 <input
                                                                     type="text"
+                                                                    onChange={onChange}
                                                                     className='bg-black px-8 w-full  py-1 rounded-lg text-white border-2  border-[#F9C306]'
                                                                     id="username"
                                                                     name="twitter"
-                                                                    placeholder="Enter your Twitter"
                                                                     value={twitter}
-                                                              />
+                                                                    placeholder="Enter your Twiiter"
+                                                                />
                                                             </div>
 
 
-                                                            <div className="flex relative items-center">
+                                                            <div className="flex relative mt-5 items-center">
                                                                 <div className='text-white absolute  top-[10px] left-[10px]'>
                                                                     <FaDiscord />
                                                                 </div>
 
                                                                 <input
                                                                     type="text"
+                                                                    onChange={onChange}
                                                                     className='bg-black px-8 w-full  py-1 rounded-lg text-white border-2  border-[#F9C306]'
                                                                     id="username"
                                                                     name="discord"
@@ -181,19 +178,19 @@ function SectionOne() {
                                                                     placeholder="Enter your Discord"
                                                                 />
                                                             </div>
-                                                        </div>
+                                                    
 
                                                         <div className='mt-5 '>
                                                             <label className='text-start  text-[hsla(0,0%,100%,.5)]'>Wallet Address</label>
 
                                                             <input
                                                                 type="text"
+                                                                onChange={onChange}
                                                                 className='bg-black px-2 w-full mt-2  py-1 rounded-lg text-white border-2  border-[#F9C306]'
                                                                 id="username"
                                                                 name="walletAddress"
-                                                                placeholder="Enter your Wallet address"
                                                                 value={walletAddress}
-                                                            
+                                                                placeholder="Enter your Wallet Address"
                                                             />
                                                         </div>
 
@@ -202,14 +199,15 @@ function SectionOne() {
 
                                                         {/* Close button */}
                                                         <div className='text-center'>
-                                                            <button type="button" onClick={onSubmit} className="mt-4 rounded-lg  font-bold capitalize bg-[#F9C306]  px-[20px] py-[11px]">
+                                                            <button type="submit" onClick={ onSubmit} className="mt-4 rounded-lg  font-bold capitalize bg-[#F9C306]  px-[20px] py-[11px]">
                                                                 SUBMIT
                                                             </button>
                                                         </div>
                                                     </form>
                                                 </div>
+                                                </form>
                                             </div>
-                                        )}
+                                            </div> )}
                                     </div>
 
                                     {/* ---------- */}

@@ -1,26 +1,20 @@
-import React, { useState, useRef } from 'react';
-import SwiperCore  from 'swiper';
+import React, { useState  } from 'react';
 
-import { Autoplay ,  Navigation} from 'swiper/modules';
+import { Autoplay  } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import 'swiper/css/effect-coverflow'; // Import additional styles if needed
-
-// SwiperCore.use([Navigation, Autoplay]);
+import 'swiper/css/effect-coverflow'; 
 
 function SwiperSlides() {
   const [activeIndex, setActiveIndex] = useState(1);
 
-  // Create a ref to access the Swiper instance
-  // const swiperRef = useRef(null);
-
+  
   const handleSlideChange = (swiper) => {
     setActiveIndex(swiper.activeIndex);
     if (swiper.activeIndex === 7) {
       swiper.slideTo(1)
-      console.log('hbk');
     }
   };
 
@@ -33,10 +27,16 @@ function SwiperSlides() {
           
             centeredSlides={true}
             autoplay={{
-              delay: 2700,
+              delay: 2300,
               disableOnInteraction: false,
+            }}   breakpoints={{
+              768: {
+                slidesPerView: 1,
+              },
+              770: {
+                slidesPerView: 3,
+              },
             }}
-            slidesPerView={3}
             initialSlide={1}
             spaceBetween={0}
             speed={500}
@@ -44,7 +44,6 @@ function SwiperSlides() {
             className="mySwiper swiper-cover m-auto bg-black"
             onSlideChange={handleSlideChange}
             style={{ paddingBottom: '20px !important' }}
-            // ref={swiperRef}
           >
          
          

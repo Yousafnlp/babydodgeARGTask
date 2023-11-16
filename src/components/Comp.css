@@ -1,16 +1,11 @@
-
-
-
-
-    
-.phn-padd{
+.phn-padd {
     padding-top: 0.85rem;
     padding-right: 0.25rem;
     padding-left: 0.25rem;
 }
 
 
-.my-center-flex{
+.my-center-flex {
     align-items: start;
 }
 
@@ -32,6 +27,7 @@
     letter-spacing: 2px;
 
 }
+
 .mybg {
     border: 1px solid #000;
     background: url(../assets/cover.png), black 50% / cover no-repeat;
@@ -41,13 +37,14 @@
     /* max-width: 1536px; */
 }
 
-.bordermy{
-        border-width: 4px;
-        border-style: solid;
-        border-color: initial;
-        border-image: linear-gradient(90deg, rgba(249, 195, 6, 0), rgba(249, 195, 6, 0.3), rgba(249, 195, 6, 0)) 1 / 1 / 0 stretch;
+.bordermy {
+    border-width: 3px;
+    border-style: solid;
+    border-color: initial;
+    border-image: linear-gradient(90deg, rgba(249, 195, 6, 0), rgba(249, 195, 6, 0.3), rgba(249, 195, 6, 0)) 1 / 1 / 0 stretch;
 
 }
+
 /* Define the gradient border utility class */
 .bordermy-2 {
     border-radius: 7.826px;
@@ -57,20 +54,20 @@
 }
 
 
-.mytxt{
+.mytxt {
     background-image: linear-gradient(180deg, #F9C306, #BE1E21);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent ;
+    -webkit-text-fill-color: transparent;
 
 }
 
-.secone-bg{
+.secone-bg {
     /* border: 1px solid #000; */
-background: url(../assets/Katana\ Inu\ BG1\ 1.png), black 50%;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
+    background: url(../assets/Katana\ Inu\ BG1\ 1.png), black 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
@@ -86,7 +83,8 @@ background-size: cover;
     position: absolute;
     top: 0;
     left: 0;
-    width: 1px; /* Adjust the width of the border as needed */
+    width: 1px;
+    /* Adjust the width of the border as needed */
     height: 100%;
     background-image: linear-gradient(90deg, rgba(249, 195, 6, 0), rgba(249, 195, 6, 0.3), rgba(249, 195, 6, 0));
     background-size: 100% 100%;
@@ -103,193 +101,216 @@ background-size: cover;
     position: absolute;
     top: 0;
     left: 0;
-    width: 1px; /* Adjust the width of the border as needed */
+    width: 1px;
+    /* Adjust the width of the border as needed */
     height: 100%;
     background-image: linear-gradient(90deg, rgba(249, 195, 6, 0), rgba(249, 195, 6, 0.3), rgba(249, 195, 6, 0));
     background-size: 100% 100%;
 }
 
 
-.regbtn{
+.regbtn {
     border-radius: 9px;
-border: 1.42px solid #605272;
-background: linear-gradient(274deg, #C45500 17.04%, #FFC700 81.53%);
+    border: 1.42px solid #605272;
+    background: linear-gradient(274deg, #C45500 17.04%, #FFC700 81.53%);
 }
-.sec-3-bg{
-background: url(../assets/ssec.png), black 30%;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
+
+.sec-3-bg {
+    background: url(../assets/ssec.png), black 30%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
-.charbg{
+.charbg {
 
     display: flex;
     justify-content: center;
     align-items: center;
-  
-background: url(../assets/Rectangle\ 3967-1.png);
-background-position: center;
-background-repeat: no-repeat;
-background-size: contain;  
+
+    background: url(../assets/Rectangle\ 3967-1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 
-.sec5bg{
+.sec5bg {
     background: url(../assets/telegram-cloud-document-4-5900135907549253111\ 1\ 1.png), black 30%;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
-.myf{
-    flex-wrap: nowrap;
-}
 
-
-.justify-my{
+.justify-my {
     justify-content: flex-end;
 }
-@media screen and (max-width: 1380px) {
- 
-   
-    .myf{
+
+.myf {
+    flex-wrap: wrap;
+}
+
+
+@media screen and (min-width: 1447px) {
+
+
+    .myf {
+        flex-wrap: nowrap;
+    }
+
+}
+
+
+
+@media screen and (max-width: 1024px) {
+
+
+    .mywrp {
         flex-wrap: wrap;
     }
-    
+
+    /* .myf{
+            flex-wrap: nowrap;
+        } */
+
+    .justify-my {
+        justify-content: flex-start;
+    }
+
+
+    .border-y-my-2 {
+        position: relative;
+    }
+
+    /* Create the gradient border on the left using ::before pseudo-element */
+    .border-y-my-2::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0px;
+        /* Adjust the width of the border as needed */
+        height: 100%;
+        background-image: linear-gradient(90deg, rgba(249, 195, 6, 0), rgba(249, 195, 6, 0.3), rgba(249, 195, 6, 0));
+        background-size: 100% 100%;
+    }
+
+
+}
+
+
+@media screen and (max-width: 769px) {
+
+    .phn-padd {
+        padding-bottom: 30px;
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+        padding-top: 0.85rem;
+    }
+
+    .my-box-pd {
+        padding-bottom: 6px;
+        padding-top: 12px;
+    }
+
+
+    .my-box-pd-1 {
+        padding-bottom: 6px;
+        padding-top: 6px;
+    }
+
+
+    .my-box-pd-2 {
+        padding-bottom: 9px;
+        padding-top: 16px;
+    }
+
+    .border-y-my-2 {
+        position: relative;
+        /* padding-top: 8px; */
+    }
+
+    /* Create the gradient border on the left using ::before pseudo-element */
+    .border-y-my-2::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* Adjust the width of the border as needed */
+        height: 1px;
+        background-image: linear-gradient(90deg, rgba(249, 195, 6, 0), rgba(249, 195, 6, 0.3), rgba(249, 195, 6, 0));
+        background-size: 100% 100%;
     }
 
 
 
-    @media screen and (max-width: 1024px) {
- 
-   
-        .mywrp{
-            flex-wrap: wrap;
-        }
-        .myf{
-            flex-wrap: nowrap;
-        }
-        
-.justify-my{
-    justify-content: flex-start;
+
+
+    .border-y-my {
+        position: relative;
+        /* padding-top: 8px; */
+    }
+
+    /* Create the gradient border on the left using ::before pseudo-element */
+    .border-y-my::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* Adjust the width of the border as needed */
+        height: 1px;
+        background-image: linear-gradient(90deg, rgba(249, 195, 6, 0), rgba(249, 195, 6, 0.3), rgba(249, 195, 6, 0));
+        background-size: 100% 100%;
+    }
+
+
+
+
 }
 
-   
-        .border-y-my-2 {
-            position: relative;
-        }
-        
-        /* Create the gradient border on the left using ::before pseudo-element */
-        .border-y-my-2::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0px; /* Adjust the width of the border as needed */
-            height: 100%;
-            background-image: linear-gradient(90deg, rgba(249, 195, 6, 0), rgba(249, 195, 6, 0.3), rgba(249, 195, 6, 0));
-            background-size: 100% 100%;
-        }
-        
-        
-        }
-    
-
-        @media screen and (max-width: 769px) {
- 
-            .phn-padd{
-                padding-bottom: 30px;
-                padding-left: 0.25rem;
-                padding-right: 0.25rem;
-                padding-top: 0.85rem;
-            }
-            .my-box-pd{
-                padding-bottom: 6px;
-                padding-top: 12px;
-            }
-
-            
-            .my-box-pd-1{
-                padding-bottom: 6px;
-                padding-top: 6px;
-            }
-
-            
-            .my-box-pd-2{
-                padding-bottom: 9px;
-                padding-top: 16px;
-            }
-       
-            .border-y-my-2 {
-                position: relative;
-                /* padding-top: 8px; */
-            }
-            
-            /* Create the gradient border on the left using ::before pseudo-element */
-            .border-y-my-2::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%; /* Adjust the width of the border as needed */
-                height: 1px;
-                background-image: linear-gradient(90deg, rgba(249, 195, 6, 0), rgba(249, 195, 6, 0.3), rgba(249, 195, 6, 0));
-                background-size: 100% 100%;
-            }
-            
-            
-
-            
-       
-            .border-y-my {
-                position: relative;
-                /* padding-top: 8px; */
-            }
-            
-            /* Create the gradient border on the left using ::before pseudo-element */
-            .border-y-my::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%; /* Adjust the width of the border as needed */
-                height: 1px;
-                background-image: linear-gradient(90deg, rgba(249, 195, 6, 0), rgba(249, 195, 6, 0.3), rgba(249, 195, 6, 0));
-                background-size: 100% 100%;
-            }
-
-   
-        
-            
-            }
-        
-    
-            
-        @media screen and (max-width: 640px){
-
-            .my-center-flex{
-                align-items: normal !important;
-            }
-
-        }
 
 
+@media screen and (max-width: 640px) {
 
+    .my-center-flex {
+        align-items: normal !important;
+    }
 
-
-
-
-
-
-@media (min-width: 1920px){
-.container-myc {
-    max-width: 1920px !important;
 }
+
+
+
+
+
+
+
+
+
+@media (min-width: 1920px) {
+    .container-myc {
+        max-width: 1920px !important;
+    }
 }
 
 .container-myc {
     width: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.popup-width {
+    width: 90%;
+}
+
+@media (min-width: 1230px) {
+    .popup-width {
+        width: 50%;
+    }
 }
