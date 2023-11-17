@@ -91,8 +91,8 @@ function SectionOne() {
     
   <div className='bg-black  relative  '>
 <div className="container-myc m-auto p-0">
-<div className="secone-bg">
-  <div className="bordermy  w-full  flex justify-center items-center pt-3 phn-padd flex-wrap gap-2">
+<div className="secone-bg bordermy">
+  <div className="  w-full  flex justify-center items-center pt-3 phn-padd flex-wrap gap-2">
 
     <div  className=" flex justify-end flex-col items-center p-2 pb-0 flex-wrap gap-2">
         <img className='w-[241px]' src={require('../assets/katana-05 1.png')} alt="" />
