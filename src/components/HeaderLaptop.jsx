@@ -92,8 +92,8 @@ function HeaderLaptop() {
         <>
             <div className='bg-black  '>
                 <div className="container-myc m-auto p-0">
-                    <div className='mybg     flex justify-center items-center'>
-                        <div className="   bordermy    flex justify-center items-center pt-4 pl-1 pr-1 ">
+                    <div className='mybg    bordermy flex justify-center items-center'>
+                        <div className="       flex justify-center items-center pt-4 pl-1 pr-1 ">
 
                             <div className='w-[410px]'>
                                 <div className='flex justify-center flex-col p-4'>
